@@ -6,12 +6,14 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { BetterFormComponent } from './better-form/better-form.component';
+import { ControlsComponent } from './controls/controls.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleFormComponent,
-    BetterFormComponent
+    BetterFormComponent,
+    ControlsComponent
   ],
   imports: [
     BrowserModule,

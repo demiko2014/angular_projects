@@ -1,0 +1,11 @@
+<h2>コーヒー品目リスト作成</h2>
+<form [formGroup] = "coffeeForm" novalidate>
+  <div>
+    <label>品名：<input formControlName="name"></label>
+  </div>
+  <div>
+    <Label>テイスト：<input formControlName="taste" size="50"></Label>
+  </div>
+</form>
+
+<p>フォーム入力値：{{coffeeForm.value | json}}</p>
