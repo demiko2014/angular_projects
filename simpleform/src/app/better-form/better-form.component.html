@@ -1,0 +1,20 @@
+<form [formGroup]="calcForm">
+  <input formControlName="fieldOne"
+    [class.input-invalid]="fieldOne.invalid"
+    [class.input-valid]="fieldTwo.valid"
+    (keyup)="clearResult()"
+  >
+  +
+  <input formControlName="fieldTwo"
+    [class.input-invalid]="fieldTwo.invalid"
+    [class.input-valid]="fieldTwo.valid"
+    (keyup)="clearResult()"
+  >
+  <div *ngIf="fieldOne.invalid && fieldOne.errors.required">左空白</div>
+  <div *ngIf="fieldTwo.invalid && fieldTwo.errors.required">右空白</div>
+  <div *ngIf="fieldTwo.invalid && fieldTwo.errors.maxlength">右長い</div>
+  <div>
+    <button (click)="addAnyway()" [disabled]="calcForm.invalid">Calc</button>  
+  </div>
+</form>
+<div>{{result}}</div>
